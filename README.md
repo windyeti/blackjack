@@ -1,0 +1,1 @@
+To start typing in the console : npm start
