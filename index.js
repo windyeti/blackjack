@@ -157,7 +157,6 @@ rl.on('line', (cmd) => {
         dilerCards = dilerCards.concat( hideDilerCards );
 
         fs.open('result.txt', 'a+', 777, (err, fd) => {
-            console.log('=======================');
             const data = `${countStep} Шаг. My cards: ${namesCards(myCards).join(', ')} Сумма: ${sumCards(myCards)}  <=|=> Сумма: ${sumCards(dilerCards)} ${namesCards(dilerCards).join(', ')} :Dilers cards${beginNewLine}`;
             fs.write(fd, data, (err) => {
                 if(err) {
